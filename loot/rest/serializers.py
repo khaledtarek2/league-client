@@ -4,10 +4,9 @@ from champions.rest.serializers import EnumSerializer
 
 
 class LootSerializer(serializers.ModelSerializer):
-    type = EnumSerializer(enum=Loot.LootType)
-    currency = EnumSerializer(enum=Loot.LootCurrency)
+    category = EnumSerializer(enum=Loot.Category)
+    currency = EnumSerializer(enum=Loot.Currency)
+
     class Meta:
         model = Loot
-        fields = ["id", 'name', 'description', 'price', 'type', 'currency']
-        
-
+        fields = ["id", "name", "description", "price", "category", "currency"]

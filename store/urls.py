@@ -4,8 +4,6 @@ from django.urls import include, path
 
 router = DefaultRouter()
 
-router.register(r'items', ItemViewSet, basename='item')
+router.register(r"items", ItemViewSet, basename="item")
 
-urlpatterns = [
-    path('', include(router.urls))
-]
+urlpatterns = [path("", include(router.urls))]

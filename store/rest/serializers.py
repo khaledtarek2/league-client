@@ -4,9 +4,8 @@ from champions.rest.serializers import EnumSerializer
 
 
 class ItemSerializer(serializers.ModelSerializer):
-    type = EnumSerializer(enum=Item.Type)
+    category = EnumSerializer(enum=Item.Category)
+
     class Meta:
         model = Item
-        fields = ["id", 'stats', 'passive', 'active', 'type']
-        
-
+        fields = ["id", "name", "stats", "passive", "active", "category"]
